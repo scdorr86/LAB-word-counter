@@ -1,4 +1,4 @@
-console.log("Connected!")
+console.log("Connected ready to work!")
 // YOU WILL MODIFY THIS FUNCTION TO GET THE PROGRAM TO WORK
 const wordCounter = (value) => {
   // Type into the input and press submit, you will see the value you entered in your console
