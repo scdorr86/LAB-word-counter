@@ -1,21 +1,29 @@
-console.log("Connected ready to work!")
+console.log("Connected!")
 // YOU WILL MODIFY THIS FUNCTION TO GET THE PROGRAM TO WORK
 const wordCounter = (value) => {
   // Type into the input and press submit, you will see the value you entered in your console
   console.log(value);
+  value.trim()
+  console.log(value.split(/\s+/))
+  wordCount.innerHTML = value.split(/\s+/).filter(item => item.trim() !== '').length
 
   if (value) {
     // COMPLETE THE LOGIC 
-    wordCount.innerHTML = `Word Count: 0`; 
+    wordCount.innerHTML = `Word Count: ` + value.split(/\s+/).length; 
   } else {
     // if the value is empty, set the error message value to "Please input text"
-    error.innerHTML = ""; // UPDATE THIS
+    error.innerHTML = "Please input text"; // UPDATE THIS
   }
 }
 
 // OPTIONAL CHALLENGE
 const toggleMode = (btnText) => {
   // complete the function
+  if (btnText === "Dark Mode") {
+    toggleButton.innerHTML = "Light Mode"
+  } else if (btnText === "Light Mode") {
+    toggleButton.innerHTML = "Dark Mode"
+  }
 }
 
 // ************************************************ //
