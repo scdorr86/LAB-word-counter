@@ -12,11 +12,14 @@ const wordCounter = (value) => {
     wordCount.innerHTML = `Word Count: ` + value.split(/\s+/).length; 
   } else {
     // if the value is empty, set the error message value to "Please input text"
-    error.innerHTML = "Please input text"; // UPDATE THIS
+    error.innerHTML = "Please input text"; 
+    wordCount.innerHTML = `Word Count: 0`// UPDATE THIS
   }
 }
 
 // OPTIONAL CHALLENGE
+let body = document.querySelector("body")
+
 const toggleMode = (btnText) => {
   // complete the function
   if (btnText === "Dark Mode") {
@@ -24,6 +27,8 @@ const toggleMode = (btnText) => {
   } else if (btnText === "Light Mode") {
     toggleButton.innerHTML = "Dark Mode"
   }
+
+  body.classList.toggle("dark-mode");
 }
 
 // ************************************************ //
