@@ -29,6 +29,7 @@ const toggleMode = (btnText) => {
   }
 
   body.classList.toggle("dark-mode");
+  textarea.classList.toggle("dark-mode-text");
 }
 
 // ************************************************ //
